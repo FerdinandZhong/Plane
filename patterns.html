@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Regex patterns &mdash; plane  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Function details" href="details.html" />
+    <link rel="prev" title="Welcome to Plane’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> plane
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Regex patterns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="details.html">Function details</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">plane</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Regex patterns</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/patterns.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-plane.pattern">
+<span id="regex-patterns"></span><h1>Regex patterns<a class="headerlink" href="#module-plane.pattern" title="Permalink to this headline">¶</a></h1>
+<dl class="py data">
+<dt id="plane.pattern.ASCII_WORD">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">ASCII_WORD</code><em class="property"> = Regex(name='ASCII_word', pattern=&quot;[&lt;$#&amp;]?[a-zA-Z0-9_.-]*\\'?[a-zA-Z0-9]+[%&gt;]?&quot;, flag=0, repl=' ')</em><a class="headerlink" href="#plane.pattern.ASCII_WORD" title="Permalink to this definition">¶</a></dt>
+<dd><p>English words, numbers, like ‘hash’, ‘3.14’, ‘$100’, ‘&lt;EOS&gt;’
+, ‘99.9%’</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="plane.pattern.BraSCII">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">BraSCII</code><em class="property"> = Regex(name='BraSCII', pattern='[!-/:-~\\U000000C0-\\U000000FF]+', flag=0, repl=' ')</em><a class="headerlink" href="#plane.pattern.BraSCII" title="Permalink to this definition">¶</a></dt>
+<dd><p>BraSCII <a class="reference external" href="https://en.wikipedia.org/wiki/BraSCII">https://en.wikipedia.org/wiki/BraSCII</a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="plane.pattern.CHINESE">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">CHINESE</code><em class="property"> = Regex(name='Chinese', pattern='[\\U00004E00-\\U00009FFF\\U00003400-\\U00004DBF\\U00020000-\\U0002A6DF\\U0002A700-\\U0002B73F\\U0002B740-\\U0002B81F\\U0002B820-\\U0002CEAF\\U0002CEB0-\\U0002EBEF\\U00003000-\\U0000303F\\U0000FE30-\\U0000FE4F\\U0000FF00-\\U0000FFEF]+', flag=0, repl=' ')</em><a class="headerlink" href="#plane.pattern.CHINESE" title="Permalink to this definition">¶</a></dt>
+<dd><p>All Chinese words includes most punctuations.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="plane.pattern.CHINESE_WORDS">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">CHINESE_WORDS</code><em class="property"> = Regex(name='Chinese_words', pattern='[\\U00004E00-\\U00009FFF\\U00003400-\\U00004DBF\\U00020000-\\U0002A6DF\\U0002A700-\\U0002B73F\\U0002B740-\\U0002B81F\\U0002B820-\\U0002CEAF\\U0002CEB0-\\U0002EBEF]+', flag=0, repl=' ')</em><a class="headerlink" href="#plane.pattern.CHINESE_WORDS" title="Permalink to this definition">¶</a></dt>
+<dd><p>All Chinese words without punctuations.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="plane.pattern.CJK">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">CJK</code><em class="property"> = Regex(name='CJK', pattern='[\\U00004E00-\\U00009FFF\\U00003400-\\U00004DBF\\U00020000-\\U0002A6DF\\U0002A700-\\U0002B73F\\U0002B740-\\U0002B81F\\U0002B820-\\U0002CEAF\\U0002CEB0-\\U0002EBEF\\U00002E80-\\U00002EFF\\U00002F00-\\U00002FDF\\U00002FF0-\\U00002FFF\\U00003000-\\U0000303F\\U000031C0-\\U000031EF\\U00003200-\\U000032FF\\U00003300-\\U000033FF\\U0000F900-\\U0000FAFF\\U0000FE30-\\U0000FE4F\\U0000FF00-\\U0000FFEF\\U0001F200-\\U0001F2FF\\U0002F800-\\U0002FA1F]+', flag=0, repl=' ')</em><a class="headerlink" href="#plane.pattern.CJK" title="Permalink to this definition">¶</a></dt>
+<dd><p>All CJK chars.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="plane.pattern.EMAIL">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">EMAIL</code><em class="property"> = Regex(name='Email', pattern='[a-zA-Z0-9_.+-]+&#64;[a-zA-Z0-9-]+\\.[a-zA-Z0-9-]+', flag=0, repl='&lt;Email&gt;')</em><a class="headerlink" href="#plane.pattern.EMAIL" title="Permalink to this definition">¶</a></dt>
+<dd><p>[local-part]&#64;[domain].[top-level-domain]</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="plane.pattern.ENGLISH">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">ENGLISH</code><em class="property"> = Regex(name='English', pattern='[!-/:-~]+', flag=0, repl=' ')</em><a class="headerlink" href="#plane.pattern.ENGLISH" title="Permalink to this definition">¶</a></dt>
+<dd><p>English words, punctuations, numbers are not included</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="plane.pattern.HTML">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">HTML</code><em class="property"> = Regex(name='HTML', pattern='&lt;script.*?&gt;.*?&lt;/script&gt;|&lt;style.*?&gt;.*?&lt;/style&gt;|&lt;.*?&gt;', flag=re.DOTALL, repl=' ')</em><a class="headerlink" href="#plane.pattern.HTML" title="Permalink to this definition">¶</a></dt>
+<dd><p>HTML tags includes ‘script’, ‘style’ and others.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="plane.pattern.NUMBER">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">NUMBER</code><em class="property"> = Regex(name='Numbers', pattern='[0-9]+', flag=0, repl=' ')</em><a class="headerlink" href="#plane.pattern.NUMBER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Numbers</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="plane.pattern.Regex">
+<em class="property">class </em><code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">Regex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">pattern</span></em>, <em class="sig-param"><span class="n">flag</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">repl</span><span class="o">=</span><span class="default_value">' '</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plane/pattern.html#Regex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plane.pattern.Regex" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – regex name</p></li>
+<li><p><strong>pattern</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Python regex</p></li>
+<li><p><strong>repl</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – replaement</p></li>
+</ul>
+</dd>
+</dl>
+<p>regex pattern</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="plane.pattern.SPACE">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">SPACE</code><em class="property"> = Regex(name='Space', pattern='\\s+', flag=0, repl=' ')</em><a class="headerlink" href="#plane.pattern.SPACE" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="code docutils literal notranslate"><span class="pre">r(\s+)</span></code></p>
+<p>This can remove all extra spaces.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="plane.pattern.TELEPHONE">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">TELEPHONE</code><em class="property"> = Regex(name='Telephone', pattern='\\d{3}[ +.-]?\\d{4}[ +.-]?\\d{4}', flag=0, repl='&lt;Telephone&gt;')</em><a class="headerlink" href="#plane.pattern.TELEPHONE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chinese telephone number format of 11 numbers. ( <cite>[xxx][xxxx][xxxx]</cite> )</p>
+<p>There can be space, <cite>+</cite>, <cite>.</cite>, <cite>-</cite> as delimiters. Such as
+<cite>155-5555-5555</cite></p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="plane.pattern.THAI">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">THAI</code><em class="property"> = Regex(name='Thai', pattern='[\\U00000E01-\\U00000E3A\\U00000E3F-\\U00000E5B]+', flag=0, repl=' ')</em><a class="headerlink" href="#plane.pattern.THAI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thai: <a class="reference external" href="https://en.wikipedia.org/wiki/Thai_(Unicode_block">https://en.wikipedia.org/wiki/Thai_(Unicode_block</a>) with punctuations</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="plane.pattern.Token">
+<em class="property">class </em><code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">Token</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">start</span></em>, <em class="sig-param"><span class="n">end</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/plane/pattern.html#Token"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#plane.pattern.Token" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – token name</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – matched text</p></li>
+<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – matched text started index</p></li>
+<li><p><strong>end</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – matched text ended index</p></li>
+</ul>
+</dd>
+</dl>
+<p>matched token</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="plane.pattern.URL">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">URL</code><em class="property"> = Regex(name='URL', pattern='https?:\\/\\/[!-~]+', flag=re.IGNORECASE, repl='&lt;URL&gt;')</em><a class="headerlink" href="#plane.pattern.URL" title="Permalink to this definition">¶</a></dt>
+<dd><p>URLs should begin with <code class="code docutils literal notranslate"><span class="pre">http</span></code> or <code class="code docutils literal notranslate"><span class="pre">https</span></code>.</p>
+<p>Only support ASCII chars.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="plane.pattern.VIETNAMESE">
+<code class="sig-prename descclassname">plane.pattern.</code><code class="sig-name descname">VIETNAMESE</code><em class="property"> = Regex(name='Vietnamese', pattern='[\\U00000021-\\U00000080\\U000000C0-\\U000000C3\\U000000C8-\\U000000CA\\U000000CC-\\U000000CD\\U000000D2-\\U000000D5\\U000000D9-\\U000000DA\\U000000E0-\\U000000E3\\U000000E8-\\U000000EA\\U000000EC-\\U000000ED\\U000000F2-\\U000000F5\\U000000F9-\\U000000FA\\U00000102-\\U00000103\\U00000110-\\U00000111\\U00000128-\\U00000129\\U00000168-\\U00000169\\U000001A0-\\U000001B0\\U00001EA0-\\U00001EF9\\U000002C6-\\U00000323\\U000000D0\\U000000DD\\U000000FD]+', flag=0, repl=' ')</em><a class="headerlink" href="#plane.pattern.VIETNAMESE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vietnamese with punctuations</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/37579692/unicode-range-for-vietnamese">https://stackoverflow.com/questions/37579692/unicode-range-for-vietnamese</a></p></li>
+<li><p><a class="reference external" href="http://vietunicode.sourceforge.net/charset/">http://vietunicode.sourceforge.net/charset/</a></p></li>
+</ul>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="details.html" class="btn btn-neutral float-right" title="Function details" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Plane’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2018, keming.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
